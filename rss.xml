@@ -8,11 +8,31 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Fri, 24 Jan 2020 13:33:49 +0000</pubDate>
+        <pubDate>Mon, 27 Jan 2020 15:39:42 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
-                                            <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+                                            <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
             
+            
+                        
+                        
+                            <item>
+                    <title><![CDATA[ Switch Travis to GitHub Actions to Reduce Stress ]]></title>
+                    <link>https://www.tomasvotruba.com/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/</link>
+                    <description><![CDATA[ In the previous post, we looked at Why is First Instant Feedback Crucial to Developers?.
+
+We know why now we look at how. How exactly migrate all jobs from Travis to GitHub Actions, reduce stress from long feedback loops and live a more healthy life as a programmer.
+
+Yes, in code samples :) ]]></description>
+                    <guid isPermaLink="false">https://www.tomasvotruba.com/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/</guid>
+                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
+
+                                        <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+                                            <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+                    
+                    <comments>https://www.tomasvotruba.com/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress#disqus_thread</comments>
+                </item>
+                                
             
                         
                         

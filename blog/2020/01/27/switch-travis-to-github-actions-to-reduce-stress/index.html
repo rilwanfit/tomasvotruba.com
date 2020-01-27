@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <title>5 Tips to Effective Work with Github Repository | Tomas Votruba</title>
+    <title>Switch Travis to GitHub Actions to Reduce Stress | Tomas Votruba</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
 
@@ -18,18 +18,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
-        <link href="/assets/bootstrap/bootstrap.min.css?v=1053793191" rel="stylesheet" type="text/css" />
+        <link href="/assets/bootstrap/bootstrap.min.css?v=589774097" rel="stylesheet" type="text/css" />
 
-    <link href="/assets/prism/prism.css?v=1459903429" rel="stylesheet" type="text/css" />
+    <link href="/assets/prism/prism.css?v=824643804" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/style.css?v=1489426241" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/style.css?v=2142569928" rel="stylesheet" type="text/css" />
 
     <link href="/assets/gifplayer/gifplayer.css" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/checklist.css?v=1405788585" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/checklist.css?v=1688132120" rel="stylesheet" type="text/css" />
 </head>
     <body>
-        <!-- post_id: 189 -->
+        <!-- post_id: 236 -->
 
         <div class="hidden-sm-down">
     <nav class="navbar">
@@ -114,19 +114,19 @@
     </a>
 </div>
 
-                <h1>5 Tips to Effective Work with Github Repository</h1>
+                <h1>Switch Travis to GitHub Actions to Reduce Stress</h1>
 
                 <ul class="list-inline post-metadata">
     <li class="list-inline-item mr-3">
         <em class="fas fa-clock fa-fw"></em>
-        <strong>2 min</strong>
+        <strong>8 min</strong>
     </li>
 
     <li class="list-inline-item mr-3">
         <em class="fas fa-calendar fa-fw"></em>
-        <time datetime="2019-02-Mon">
+        <time datetime="2020-01-Mon">
             
-                            Mon, Feb 25, 2019
+                            Mon, Jan 27
             
                     </time>
     </li>
@@ -134,7 +134,7 @@
     
             <li class="list-inline-item mr-3">
             <em class="fas fa-fw fa-comments"></em>
-            <a href="https://www.tomasvotruba.com/blog/2019/02/25/5-tips-to-effective-work-with-github-repository/#disqus_thread">X</a> comments
+            <a href="https://www.tomasvotruba.com/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/#disqus_thread">X</a> comments
         </li>
     
     </ul>
@@ -143,77 +143,23 @@
                 
                 <div class="card card-bigger">
                     <div class="card-body">
-                        The best programmers aren't the smartest in the field. They're lazy, <strong>they know their tools well</strong> and <strong>they know good tools</strong> other programmers don't.
+                        In the previous post, we looked at <a href="/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/">Why is First Instant Feedback Crucial to Developers?</a>.
 <br><br>
-Do you know the following tips?
+We know why now we look at <em>how</em>. How exactly migrate all jobs from Travis to GitHub Actions, <strong>reduce stress from long feedback loops</strong> and live a more healthy life as a programmer.
+<br><br>
+Yes, in code samples :)
                     </div>
                 </div>
 
                 
-                <h2 id="1-single-char-console-commands-for-your-tired-fingers"><a href="#1-single-char-console-commands-for-your-tired-fingers" class="heading-anchor">1. Single-Char Console Commands for Your Tired Fingers</a></h2>
-<p>Which one is correct?</p>
-<pre><code class="language-bash">vendor/bin/rector process
-vendor/bin/rector procces
-vendor/bin/rector proccess
-vendor/bin/rector proces</code></pre>
-<p>You don't want to think about this and you don't have to! Just <strong>use the first letter</strong>:</p>
-<pre><code class="language-bash">vendor/bin/rector p</code></pre>
-<p>Works every-time there is no command named with that letter:</p>
-<pre><code class="language-diff">-vendor/bin/phsptan analyse
-+vendor/bin/phsptan a</code></pre>
-<pre><code class="language-diff">-vendor/bin/ecs check
-+vendor/bin/ecs c</code></pre>
-<div class="fa-2x">👍</div>
-<h2 id="2-be-informed-about-new-packages-with-no-spam"><a href="#2-be-informed-about-new-packages-with-no-spam" class="heading-anchor">2. Be informed about New Packages - with no Spam!</a></h2>
-<p>When you &quot;watch&quot; a Github repository, you'll get a notification about every new release, issue, pull-request, or comments. This makes sense when you maintain a repository, but for most of the people, it's annoying spam.</p>
-<p>GitHub recently introduced a very nice feature. It will add notification <strong>only for releases</strong>:</p>
-<img src="/assets/images/posts/2019/github-tips/github-subscription.png" class="img-thumbnail">
-<div class="fa-2x">👍</div>
-<h2 id="3-fix-typos-with-up"><a href="#3-fix-typos-with-up" class="heading-anchor">3. Fix Typos with UP</a></h2>
-<p>Have you ever sent a comment with a typo? I barely do without, and always notice that after I hit the &quot;send&quot; (or CTRL + Enter).</p>
-<p>Now move your cursor to the 3 dots in the right corner of the comment, click, select <em>Edit</em> and click again.</p>
-<p><strong>No more!</strong></p>
-<img src="/assets/images/posts/2019/github-tips/up.gif" class="img-thumbnail">
-<p>Just <strong>hit ↑</strong> (arrow up), and you're there!</p>
-<div class="fa-2x mt-4">👍</div>
-<h2 id="4-refine-your-github"><a href="#4-refine-your-github" class="heading-anchor">4. Refine your Github</a></h2>
-<p><a href="https://github.com/sindresorhus/refined-github">sindresorhus/refined-github</a> is like a smart secretary that gives you tips you ever wanted to know.</p>
-<p><br></p>
-<p>It <strong>narrows 3 click operation to single click</strong> - creating a pull-request from a fresh branch:</p>
-<img src="https://user-images.githubusercontent.com/1402241/34099674-20433f60-e41b-11e7-8ca5-7ea23c70ab95.gif" class="img-thumbnail">
-<p><br></p>
-<p>It <strong>interlinks issues and PRs without opening them</strong>:</p>
-<img src="https://user-images.githubusercontent.com/1402241/37037746-8b8eac8a-2185-11e8-94f6-4d50a9c8a152.png" class="img-thumbnail" style="max-width:35em">
-<p><br></p>
-<p>When I work on different pc, I feel stupid without this one. <strong>Issues sorted by activity</strong> beats default <em>create time</em>:</p>
-<img src="/assets/images/posts/2019/github-tips/first-new.png" class="img-thumbnail">
-<p><br></p>
-<p>Check more of them in <a href="https://github.com/sindresorhus/refined-github#highlights">the README</a>.</p>
-<h2 id="5-extend-composer-scripts-from-cli"><a href="#5-extend-composer-scripts-from-cli" class="heading-anchor">5. Extend Composer Scripts from CLI</a></h2>
-<p>Have you read the classic post <a href="https://blog.martinhujer.cz/have-you-tried-composer-scripts/">Have you tried Composer Scripts? You may not need Phing</a>? I love this approach for simple scripts like coding standard and static analysis:</p>
-<pre><code class="language-json">{
-    "scripts": {
-        "check-cs": "vendor/bin/ecs check bin src tests",
-        "fix-cs": "vendor/bin/ecs check bin src tests --fix",
-        "phpstan": "vendor/bin/phpstan analyse bin src tests --error-format symplify"
-    }
-}</code></pre>
-<h3 id="what-s-the-script-name"><a href="#what-s-the-script-name" class="heading-anchor">What's the Script Name?</a></h3>
-<p>But what if you forget it's &quot;check-cs&quot;? And what if you open a new project - what's the name in there?</p>
-<img src="/assets/images/posts/2019/github-tips/list.gif" class="img-thumbnail">
-<div class="fa-2x">👍</div>
-<p><br></p>
-<p>Great, now we know the name! But what if you want to add <strong>one extra option</strong> just for a single run?</p>
-<img src="/assets/images/posts/2019/github-tips/cached.gif" class="img-thumbnail">
-<div class="fa-2x">👍</div>
-<p><br></p>
-<ul>
-<li><strong>What number is your favorite?</strong></li>
-<li><strong>Which tip did I forget?</strong></li>
-</ul>
-<p>Tell me in the comments, please.</p>
-<p><br></p>
-<p>Happy coding!</p>
+                <p>In this post, we'll look at examples of migration. I'll share my good and bad times with GitHub Action for my last 3 weeks using it on 5 open-source repositories with over 25 packages. </p>
+<h2 id="the-speed"><a href="#the-speed" class="heading-anchor">The Speed</a></h2>
+<blockquote class="blockquote text-center">
+    From ~15 minutes to just 3 minutes. 
+</blockquote>
+<p>I mean, that's a crazy improvement of 80 %. You can read about in <a href="/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/">the previous post</a>, so let's move on.   </p>
+<h2 id="the-developer-s-joy"><a href="#the-developer-s-joy" class="heading-anchor">The Developer's Joy</a></h2>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Github Actions just make everything so easy... <br><br>We merged 177 PR in <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> in the last month.<br><br>Instant feedback is killer feature for you devs. Don't let them wait...<a href="https://t.co/hP9Epe2CZW">https://t.co/hP9Epe2CZW</a> <a href="https://t.co/0Md9iIisXm">pic.twitter.com/0Md9iIisXm</a></p>— Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1220126675436032005?ref_src=twsrc%5Etfw">January 22, 2020</a></blockquote>
 
                 <br>
 
@@ -222,7 +168,7 @@ vendor/bin/rector proces</code></pre>
                     <div class="col-12 col-md-6">
                         <div class="card mb-4">
                             <div class="card-body text-center p-0">
-                                <a href="https://github.com/TomasVotruba/tomasvotruba.com/edit/master/source/_posts/2019/2019-02-25-5-tips-to-effective-work-with-github-repository.md" class="d-block pt-4 pb-4 pl-4 pr-4">
+                                <a href="https://github.com/TomasVotruba/tomasvotruba.com/edit/master/source/_posts/2020/2020-01-27-switch-travis-to-github-actions-to-reduce-stress.md" class="d-block pt-4 pb-4 pl-4 pr-4">
                                     <em class="fab fa-fw fa-github"></em>
                                     <strong>Found a typo?</strong>
                                     <br>
@@ -235,11 +181,11 @@ vendor/bin/rector proces</code></pre>
                                                                                                                                 
                                                     <div class="card mb-4">
                                 <div class="card-body bg-success text-white text-center p-0">
-                                    <a href="/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/" class="d-block pt-4 pb-4 pl-4 pr-4">
+                                    <a href="/blog/2020/01/20/introducing-phar-for-easy-coding-standard/" class="d-block pt-4 pb-4 pl-4 pr-4">
                                         <em class="fas fa-fw fa-forward"></em>
                                         <strong>Next</strong>
                                         <br>
-                                        How we Migrated from Nette to Symfony in 3 Weeks - Part 1
+                                        Introducing PHAR for Easy Coding Standard
                                     </a>
                                 </div>
                             </div>
@@ -269,10 +215,10 @@ vendor/bin/rector proces</code></pre>
             <script id="dsq-count-scr" src="https://itsworthsharing.disqus.com/count.js" async defer></script>
         </div>
 
-        <script src="/assets/js/jquery-3.3.1.slim.min.js?=496451774"></script>
-<script src="/assets/gifplayer/jquery.gifplayer.js?=535525695"></script>
-<script src="/assets/js/cluster-checklist.js?=442038792"></script>
-<script src="/assets/js/cluster-expanable.js?=1959283591"></script>
+        <script src="/assets/js/jquery-3.3.1.slim.min.js?=1336047569"></script>
+<script src="/assets/gifplayer/jquery.gifplayer.js?=1474771976"></script>
+<script src="/assets/js/cluster-checklist.js?=1759932962"></script>
+<script src="/assets/js/cluster-expanable.js?=351616920"></script>
 
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
@@ -332,15 +278,19 @@ vendor/bin/rector proces</code></pre>
 </html>
 
         <meta property="og:type" content="article" />
-    <meta property="og:title" content="5 Tips to Effective Work with Github Repository" />
-    <meta property="og:description" content="The best programmers aren&#039;t the smartest in the field. They&#039;re lazy, they know their tools well and they know good tools other programmers don&#039;t.
+    <meta property="og:title" content="Switch Travis to GitHub Actions to Reduce Stress" />
+    <meta property="og:description" content="In the previous post, we looked at Why is First Instant Feedback Crucial to Developers?.
 
-Do you know the following tips?" />
-    <meta property="og:url" content="https://www.tomasvotruba.com/blog/2019/02/25/5-tips-to-effective-work-with-github-repository" />
+We know why now we look at how. How exactly migrate all jobs from Travis to GitHub Actions, reduce stress from long feedback loops and live a more healthy life as a programmer.
+
+Yes, in code samples :)" />
+    <meta property="og:url" content="https://www.tomasvotruba.com/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress" />
 
         <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@votrubaT">
-    <meta name="twitter:title" content="5 Tips to Effective Work with Github Repository" />
-    <meta name="twitter:description" content="The best programmers aren&#039;t the smartest in the field. They&#039;re lazy, they know their tools well and they know good tools other programmers don&#039;t.
+    <meta name="twitter:title" content="Switch Travis to GitHub Actions to Reduce Stress" />
+    <meta name="twitter:description" content="In the previous post, we looked at Why is First Instant Feedback Crucial to Developers?.
 
-Do you know the following tips?" />
+We know why now we look at how. How exactly migrate all jobs from Travis to GitHub Actions, reduce stress from long feedback loops and live a more healthy life as a programmer.
+
+Yes, in code samples :)" />
