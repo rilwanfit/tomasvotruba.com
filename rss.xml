@@ -8,7 +8,7 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Mon, 27 Jan 2020 21:27:00 +0000</pubDate>
+        <pubDate>Mon, 27 Jan 2020 21:35:56 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
                                             <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
@@ -116,7 +116,7 @@ I&#039;ll show you how you can migrate Gedmo to KnpLabs. ]]></description>
 
 None of stof, gedmo, nor KnpLabs is working with Symfony 5. There are many issues in each of those projects asking for maintainers to merge PRs and tag it. One of those issues was heard, and the owner gave me maintainer access.
 
-How does it look 3 weeks later?     ]]></description>
+How does it look 3 weeks later? ]]></description>
                     <guid isPermaLink="false">https://www.tomasvotruba.com/blog/2019/12/30/doctrine-behaviors-2-0-reloaded/</guid>
                     <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 

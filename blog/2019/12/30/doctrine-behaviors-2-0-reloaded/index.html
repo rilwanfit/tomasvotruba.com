@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
-        <link href="/assets/bootstrap/bootstrap.min.css?v=259739566" rel="stylesheet" type="text/css" />
+        <link href="/assets/bootstrap/bootstrap.min.css?v=554299144" rel="stylesheet" type="text/css" />
 
-    <link href="/assets/prism/prism.css?v=135797239" rel="stylesheet" type="text/css" />
+    <link href="/assets/prism/prism.css?v=1193786193" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/style.css?v=1524846673" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/style.css?v=1815178989" rel="stylesheet" type="text/css" />
 
     <link href="/assets/gifplayer/gifplayer.css" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/checklist.css?v=389927218" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/checklist.css?v=333851880" rel="stylesheet" type="text/css" />
 </head>
     <body>
         <!-- post_id: 232 -->
@@ -147,16 +147,16 @@
 <br><br>
 <strong>None of stof, gedmo, nor KnpLabs is working with Symfony 5</strong>. There are many issues in each of those projects asking for maintainers to merge PRs and tag it. One of those issues was heard, and the owner gave me maintainer access.
 <br><br>
-How does it look 3 weeks later?    
+How does it look 3 weeks later?
                     </div>
                 </div>
 
                 
                 <h2 id="from-first-excitement-rush-to-heavy-burden-of-responsibility"><a href="#from-first-excitement-rush-to-heavy-burden-of-responsibility" class="heading-anchor">From First Excitement Rush to Heavy Burden of Responsibility</a></h2>
 <p><a href="https://github.com/KnpLabs/DoctrineBehaviors">KnpLabs/DoctrineBehaviors</a> development was stuck since 2015. There were 10+ opened PRs to use interfaces over traits (to give classes clear contract), bug-fix PRs, and design improvements.</p>
-<p>When I got a message from KnpLabs with an offer to maintain, I was super happy to say <a href="https://sivers.org/hellyeah">&quot;hell, yeah&quot;</a>. An excitement rush went through my veins. I could saw all the huge refactoring for better and how it helps the whole PHP community to move another step forward. </p>
+<p>When I got a message from KnpLabs with an offer to maintain, I was super happy to say <a href="https://sivers.org/hellyeah">&quot;hell, yeah&quot;</a>. An excitement rush went through my veins. I could saw all the huge refactoring for better and how it helps the whole PHP community to move another step forward.</p>
 <p>A moment later, when I realized what happened and how quickly, I started to be scared. The repository looked like a massive chunk of code that will need many design changes,  back compatibility breaks, etc. <strong>All the responsibility started to fall on my shoulders, and it was heavy</strong>.</p>
-<p>I took it as challenge and started to <a href="/blog/2018/04/30/programming-climbing-a-huge-mountain/">climb mountain</a>, without knowing if or how this will end-up. </p>
+<p>I took it as challenge and started to <a href="/blog/2018/04/30/programming-climbing-a-huge-mountain/">climb mountain</a>, without knowing if or how this will end-up.</p>
 <blockquote class="blockquote text-center">
     There were only 2 options:<br>finished tagged version 2 or burn-out in the process.
 </blockquote>
@@ -165,13 +165,13 @@ How does it look 3 weeks later?
 <ul>
 <li><strong>39 merged pull-requests</strong></li>
 <li><strong>93 closed issues</strong></li>
-<li><strong>5 alpha/beta tag releases</strong> </li>
+<li><strong>5 alpha/beta tag releases</strong></li>
 <li>full support of Symfony 4.4 and 5</li>
 </ul>
 <p><br></p>
 <img src="/assets/images/posts/doc_beha_pulse.png" class="img-thumbnail">
 <p><br></p>
-<p><strong>Added/removed lines per week:</strong>  </p>
+<p><strong>Added/removed lines per week:</strong></p>
 <img src="/assets/images/posts/doc_beha_stats.png" class="img-thumbnail">
 <h2 id="what-is-new-in-doctrine-behaviors-2-0"><a href="#what-is-new-in-doctrine-behaviors-2-0" class="heading-anchor">What is new in Doctrine Behaviors 2.0?</a></h2>
 <p>All right, you get it. There were lots changes, but what exactly?</p>
@@ -184,11 +184,11 @@ How does it look 3 weeks later?
 <ul>
 <li>it only updated all values to <code>1</code>, completely broken</li>
 </ul>
-<p><a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/467">Geocodable</a> </p>
+<p><a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/467">Geocodable</a></p>
 <ul>
 <li>it only worked on PostgreSQL with a specific function</li>
 <li>has a conflict with km/miles</li>
-<li>method API was very limited to a few narrow cases </li>
+<li>method API was very limited to a few narrow cases</li>
 </ul>
 <p><a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/463">Filterable</a></p>
 <ul>
@@ -197,9 +197,9 @@ How does it look 3 weeks later?
 </ul>
 <p><strong>It is recommended to implement them yourself that suite your specific needs</strong>.</p>
 <p><br></p>
-<p>Now that the sad part is behind us let's look at new features.   </p>
+<p>Now that the sad part is behind us let's look at new features.</p>
 <h3 id="from-trait-to-interface"><a href="#from-trait-to-interface" class="heading-anchor">From Trait to Interface</a></h3>
-<p>This work was initiated <strong>by <a href="https://github.com/bocharsky-bw">bocharsky-bw</a> and <a href="https://github.com/lemoinem">@lemoinem</a></strong> back in 2016. Thank you both for clear PRs, it was quite easy for me to see changes and apply them to new and drastically different code <a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/442">in this single PR</a>. </p>
+<p>This work was initiated <strong>by <a href="https://github.com/bocharsky-bw">bocharsky-bw</a> and <a href="https://github.com/lemoinem">@lemoinem</a></strong> back in 2016. Thank you both for clear PRs, it was quite easy for me to see changes and apply them to new and drastically different code <a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/442">in this single PR</a>.</p>
 <p><strong>The idea is simple</strong>: instead of traits that are problematic to detect by <code>instanceof</code> or <code>is_a()</code>, use interface for method and class contract.</p>
 <p><br></p>
 <p>What does it mean? This is <em>trait-first</em> approach:</p>
@@ -247,7 +247,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Product
 {
 }</code></pre>
-<p>Well, there is no contract by an interface, so we have no idea to fix this, we introduced interfaces: </p>
+<p>Well, there is no contract by an interface, so we have no idea to fix this, we introduced interfaces:</p>
 <pre><code class="language-php">&lt;?php
 
 namespace App\Entity;
@@ -273,9 +273,9 @@ $isTimestampableEntity = is_a($entityClass, TimestampableInterface::class, true)
 <h3 id="translation-now-needs-id"><a href="#translation-now-needs-id" class="heading-anchor">Translation now needs Id</a></h3>
 <p>All the behaviors didn't add any id properties. Except for translation, where the id was added with this ugly magic method (mind the <code>@deprecated</code> note):</p>
 <img src="/assets/images/posts/doc_beha_id_magic.png" class="img-thumbnail">
-<p>The <a href="https://github.com/KnpLabs/DoctrineBehaviors/issues/154">inconsistency</a> <a href="https://github.com/KnpLabs/DoctrineBehaviors/issues/415">was</a> <a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/158">problematic</a>. In short: it was buggy and hard to use your id property because DoctrineBehaviors tried to <em>guess</em> what id you probably want. </p>
+<p>The <a href="https://github.com/KnpLabs/DoctrineBehaviors/issues/154">inconsistency</a> <a href="https://github.com/KnpLabs/DoctrineBehaviors/issues/415">was</a> <a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/158">problematic</a>. In short: it was buggy and hard to use your id property because DoctrineBehaviors tried to <em>guess</em> what id you probably want.</p>
 <p>The fix was suggested <a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/421">early 2019</a>, but the final fix was <a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/480/files">merged in 2020</a>.</p>
-<p>What does it mean for your entities? <strong>You need to add their own id</strong>: </p>
+<p>What does it mean for your entities? <strong>You need to add their own id</strong>:</p>
 <pre><code class="language-diff"> &lt;?php
 
  namespace App\Entity;
@@ -311,9 +311,9 @@ $isTimestampableEntity = is_a($entityClass, TimestampableInterface::class, true)
          return $this-&gt;createdAt;
      }
  }</code></pre>
-<p>Migration path for these types will be provided based on feedback, so <strong>in case you override these methods manually, you won't have to complete the types</strong>. </p>
+<p>Migration path for these types will be provided based on feedback, so <strong>in case you override these methods manually, you won't have to complete the types</strong>.</p>
 <h3 id="code-quality-changes"><a href="#code-quality-changes" class="heading-anchor">Code Quality Changes</a></h3>
-<p>Feature improvements are essential. But to make them fast and stable, the <a href="/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/"><strong>code quality has the same importance</strong></a>. </p>
+<p>Feature improvements are essential. But to make them fast and stable, the <a href="/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/"><strong>code quality has the same importance</strong></a>.</p>
 <blockquote class="blockquote text-center">
     Energy saved on manual maintenance<br>
     can be used to improve features.
@@ -324,7 +324,7 @@ $isTimestampableEntity = is_a($entityClass, TimestampableInterface::class, true)
 <li><a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/470"><code>CHANGELOG.md</code> is fully generated</a></li>
 <li><a href="https://github.com/KnpLabs/DoctrineBehaviors/commit/3b17cdf656b5f904c4222c559d78bbd17217881a">tests now respect PSR-4</a></li>
 <li><a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/445">Rector CI now checks dead code, code quality and Nette\Utils</a></li>
-<li><a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/436/">PHPStan now checks the static analysis</a>  </li>
+<li><a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/436/">PHPStan now checks the static analysis</a></li>
 </ul>
 <h2 id="community-driven"><a href="#community-driven" class="heading-anchor">Community Driven</a></h2>
 <p>Without the PHP community, packages are just chunks of code. Community around the package, city, or a meetup group is what makes it specials, gives it power and motivation to grow.</p>
@@ -352,16 +352,16 @@ $isTimestampableEntity = is_a($entityClass, TimestampableInterface::class, true)
 <p>That's why during such BC breaking changes <strong>I've prepared <a href="https://github.com/KnpLabs/DoctrineBehaviors/blob/master/upgrade/rector/doctrine-behaviors-20.yaml">instant upgrade Rector set</a> you can run on your code</strong>:</p>
 <pre><code class="language-yaml">composer require rector/rector --dev
 vendor/bin/rector process src --config vendor/knplabs/doctrine-behaviors/upgrade/rector/doctrine-behaviors-20.yaml</code></pre>
-<p>Single command turns to upgrade from 1 to 2 from days to few dozens of minutes.   </p>
+<p>Single command turns to upgrade from 1 to 2 from days to few dozens of minutes.</p>
 <h2 id="how-does-it-compare-to-gedmo-stof"><a href="#how-does-it-compare-to-gedmo-stof" class="heading-anchor">How does it Compare to Gedmo/Stof?</a></h2>
 <p>Are you a stof/gedmo user? Then you're familiar <a href="https://github.com/stof/StofDoctrineExtensionsBundle/issues">with Symfony 5 issues</a> around it. Don't worry. The KnpLabs\DoctrineBehaviors 2 was developed bearing you in mind.</p>
 <p>KnpLabs\DoctrineBehaviors don't support softdeletable and non-materialized tree path <em>yet</em>, but the rest of the features are covered.</p>
 <h3 id="how-do-you-migrate-from-gedmo-stof-to-knplabs-doctrinebehaviors"><a href="#how-do-you-migrate-from-gedmo-stof-to-knplabs-doctrinebehaviors" class="heading-anchor">How do you Migrate from Gedmo/Stof to KnpLabs\DoctrineBehaviors?</a></h3>
-<p>Read <a href="/blog/2020/01/06/migrate-gedmo-to-knplabs">Migrate Gedmo to KnpLabs</a> post to find the answer. </p>
+<p>Read <a href="/blog/2020/01/06/migrate-gedmo-to-knplabs">Migrate Gedmo to KnpLabs</a> post to find the answer.</p>
 <p><br></p>
 <p>That's all for me. Use it, bend it, break it, and report issues or pull-request so that we can make migration path together even smoother.</p>
-<p><br>  </p>
-<p><strong>I wish you happy new year 2020 full of huge adventures not only in code!</strong> </p>
+<p><br></p>
+<p><strong>I wish you happy new year 2020 full of huge adventures not only in code!</strong></p>
 
                 <br>
 
@@ -417,10 +417,10 @@ vendor/bin/rector process src --config vendor/knplabs/doctrine-behaviors/upgrade
             <script id="dsq-count-scr" src="https://itsworthsharing.disqus.com/count.js" async defer></script>
         </div>
 
-        <script src="/assets/js/jquery-3.3.1.slim.min.js?=695438105"></script>
-<script src="/assets/gifplayer/jquery.gifplayer.js?=1477773925"></script>
-<script src="/assets/js/cluster-checklist.js?=1918195122"></script>
-<script src="/assets/js/cluster-expanable.js?=843724485"></script>
+        <script src="/assets/js/jquery-3.3.1.slim.min.js?=254509048"></script>
+<script src="/assets/gifplayer/jquery.gifplayer.js?=1599253805"></script>
+<script src="/assets/js/cluster-checklist.js?=2084691492"></script>
+<script src="/assets/js/cluster-expanable.js?=1588449961"></script>
 
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
@@ -485,7 +485,7 @@ vendor/bin/rector process src --config vendor/knplabs/doctrine-behaviors/upgrade
 
 None of stof, gedmo, nor KnpLabs is working with Symfony 5. There are many issues in each of those projects asking for maintainers to merge PRs and tag it. One of those issues was heard, and the owner gave me maintainer access.
 
-How does it look 3 weeks later?    " />
+How does it look 3 weeks later?" />
     <meta property="og:url" content="https://www.tomasvotruba.com/blog/2019/12/30/doctrine-behaviors-2-0-reloaded" />
 
         <meta name="twitter:card" content="summary" />
@@ -495,4 +495,4 @@ How does it look 3 weeks later?    " />
 
 None of stof, gedmo, nor KnpLabs is working with Symfony 5. There are many issues in each of those projects asking for maintainers to merge PRs and tag it. One of those issues was heard, and the owner gave me maintainer access.
 
-How does it look 3 weeks later?    " />
+How does it look 3 weeks later?" />
