@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
-        <link href="/assets/bootstrap/bootstrap.min.css?v=589774097" rel="stylesheet" type="text/css" />
+        <link href="/assets/bootstrap/bootstrap.min.css?v=1962043379" rel="stylesheet" type="text/css" />
 
-    <link href="/assets/prism/prism.css?v=824643804" rel="stylesheet" type="text/css" />
+    <link href="/assets/prism/prism.css?v=1610944653" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/style.css?v=2142569928" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/style.css?v=1290630018" rel="stylesheet" type="text/css" />
 
     <link href="/assets/gifplayer/gifplayer.css" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/checklist.css?v=1688132120" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/checklist.css?v=1030656220" rel="stylesheet" type="text/css" />
 </head>
     <body>
         <!-- post_id: 236 -->
@@ -160,6 +160,176 @@ Yes, in code samples :)
 <p>I mean, that's a crazy improvement of 80 %. You can read about in <a href="/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/">the previous post</a>, so let's move on.   </p>
 <h2 id="the-developer-s-joy"><a href="#the-developer-s-joy" class="heading-anchor">The Developer's Joy</a></h2>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Github Actions just make everything so easy... <br><br>We merged 177 PR in <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> in the last month.<br><br>Instant feedback is killer feature for you devs. Don't let them wait...<a href="https://t.co/hP9Epe2CZW">https://t.co/hP9Epe2CZW</a> <a href="https://t.co/0Md9iIisXm">pic.twitter.com/0Md9iIisXm</a></p>— Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1220126675436032005?ref_src=twsrc%5Etfw">January 22, 2020</a></blockquote>
+<p>Cocaine, Facebook, Twitter, and Instagram work the same way. A short feedback loop of dopamine.</p>
+<p>The significant advantage of GitHub is that at the end of your addiction is not an endless loop in the brain, but <strong>higher productivity of your project</strong>. </p>
+<h2 id="simple-unit-test-in-multiple-php-versions"><a href="#simple-unit-test-in-multiple-php-versions" class="heading-anchor">Simple Unit Test in Multiple PHP Versions</a></h2>
+<p>We'll jump right into the most common case - unit tests.</p>
+<p>In <strong>Travis CI</strong>, we had to:</p>
+<ul>
+<li>install dependencies, </li>
+<li>set PHP versions </li>
+<li>and run unit tests.  </li>
+</ul>
+<pre><code class="language-yaml"># .travis.yml
+os: linux
+
+language: php
+
+php:
+    - '7.2'
+    - '7.3'
+    - '7.4'
+
+before_install:
+    # turn off XDebug
+    - phpenv config-rm xdebug.ini
+
+install:
+    - composer install --no-progress
+
+jobs:
+    include:
+        -
+            stage: test
+            name: "Unit Tests"
+            script:
+                - vendor/bin/phpunit --testsuite main</code></pre>
+<p>In <strong>GitHub Action</strong> the same process look like this:</p>
+<pre><code class="language-yaml"># .github/workflows/code_checks.yaml
+name: Code_Checks
+
+on:
+    pull_request: null
+    push:
+        branches:
+            - master
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                php: ['7.2', '7.3', '7.4']
+
+        name: PHP ${{ matrix.php }} tests
+        steps:
+            # basically git clone
+            -   uses: actions/checkout@v2
+
+            # use PHP of specific version
+            -   uses: shivammathur/setup-php@v1
+                with:
+                    php-version: ${{ matrix.php }}
+                    coverage: none # disable xdebug, pcov
+
+            # if we 2 steps like this, we can better see if composer failed or tests
+            -   run: composer install --no-progress
+
+            -   run: vendor/bin/phpunit</code></pre>
+<p>That's pretty huge for single and confusing to read at the same time, right?</p>
+<p>All that clutter just for <code>vendor/bin/phpunit</code> to pass.</p>
+<h2 id="re-use-code-in-github-actions-hell-no"><a href="#re-use-code-in-github-actions-hell-no" class="heading-anchor">Re-Use Code in Github Actions? Hell No!</a></h2>
+<p>What is this? </p>
+<pre><code class="language-yaml">-   uses: actions/checkout@v2</code></pre>
+<p>Github Actions allow references to external <em>recipes</em>. It's usually just a set of actions, packages into a couple of lines in our workflow. You can see it on Github, e.g. <a href="https://github.com/actions/checkout">actions/checkout</a>. It's the recommended way to re-use code because there is no other way. </p>
+<p>In reality: &quot;Do you want to re-use 5 lines of install and setup YAML code? Create a repository on Github, write 100 lines in JavaScript, and you're ready to go!&quot;</p>
+<h3 id="no-dry"><a href="#no-dry" class="heading-anchor">No DRY</a></h3>
+<p>Saying that we'll either have to create custom workflow repository or get used to these lines being repeated over and over:</p>
+<pre><code class="language-yaml">-   uses: actions/checkout@v2
+
+-   uses: shivammathur/setup-php@v1
+    with:
+        php-version: '7.3'
+        coverage: none # xdebug is used by default
+
+-   run: composer install --no-progress</code></pre>
+<p>After a bit of experimenting, I got used to it for now. Also, Github Actions don't have anything close to <strong>YAML Anchors</strong> or re-use of previous job configuration like we have in Travis, e.g., share <code>install</code> for every job:</p>
+<pre><code class="language-yaml"># .travis.yml
+install:
+    - composer install --no-progress</code></pre>
+<p>Do you want YAML Anchors in Github Actions? <a href="https://github.community/t5/GitHub-Actions/Support-for-YAML-anchors/td-p/30336">Let them know</a>.</p>
+<p><br></p>
+<p>Now that we have the worst feature of Github Actions behind us, <strong>let's look at the excellent stuff</strong>.</p>
+<h2 id="power-of-external-workflows"><a href="#power-of-external-workflows" class="heading-anchor">Power of External Workflows</a></h2>
+<p>On the other hand, external workflows can solve a lot for us. Mainly for us, who don't want to dev-ops experts forever CI there is.</p>
+<p>How do you enable code coverage by PHPUnit? <strong>Change single line</strong>:</p>
+<pre><code class="language-diff">jobs:
+    test_coverage:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v2
+
+            -   uses: shivammathur/setup-php@v1
+                with:
+                    php-version: '7.3'
+-                   coverage: none
++                   coverage: pcov
+
+            - run: vendor/bin/phpunit --coverage-clover coverage.xml build/logs/clover.xml</code></pre>
+<h2 id="coding-standards"><a href="#coding-standards" class="heading-anchor">Coding Standards</a></h2>
+<p>What is the most common use case for CI? Run <em>single line</em> in this <em>specific PHP version</em> → e.g., run coding standards on PHP 7.2.</p>
+<p>In <strong>Travis CI</strong>:</p>
+<pre><code class="language-yaml">language: php
+
+install:
+    - composer install --no-progress
+
+jobs:
+    include:
+        -
+            name: ECS
+            php: 7.2
+            script:
+                - composer check-cs</code></pre>
+<p>In <strong>Gitub Actions</strong>:</p>
+<pre><code class="language-yaml"># .github/workflows/code_checks.yaml 
+jobs:
+    ecs:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v2
+            -   uses: shivammathur/setup-php@v1
+                with:
+                    php-version: 7.2
+                    coverage: none # disable xdebug, pcov
+            -   run: composer install --no-progress
+            -   run: composer check-cs</code></pre>
+<h2 id="learn-from-working-examples"><a href="#learn-from-working-examples" class="heading-anchor">Learn from Working Examples</a></h2>
+<ul>
+<li><a href="https://github.com/Symplify/Symplify/blob/373bbc80d73fd8c2777fdb5fb48386b456857b57/.github/workflows/code_checks.yaml"><code>code_checks.yaml</code> in Symplify/Symplify</a></li>
+<li><a href="https://github.com/rectorphp/rector/blob/1f4b36dfedb1b07d8425093474fc5951358b0590/.github/workflows/code_checks.yml"><code>code_checks.yaml</code> in rectorphp/rector</a></li>
+</ul>
+<h2 id="bad-luck-organization-with-some-private-repositories"><a href="#bad-luck-organization-with-some-private-repositories" class="heading-anchor">Bad Luck Organization with Some Private Repositories</a></h2>
+<p>Some organizations don't have access to Github Actions because of some open-sources/private accounts.
+This sucks a lot. I tried to have GitHub Actions on <a href="https://github.com/KnpLabs/DoctrineBehaviors/pull/494#issue-360222690">KnpLabs/DoctrineBehaviors</a>, but it's not possible unless the whole <em>KnpLabs</em> switches to some paid accounts. I spoke with support over a dozen emails, and it's wont fix. </p>
+<p>How to work around this? If we create a new organization that is <strong>open-source only</strong>, it will work. Or we can just move the repository to an existing <strong>open-source only</strong> one. </p>
+<h2 id="add-badge"><a href="#add-badge" class="heading-anchor">Add Badge?</a></h2>
+<p><strong>In Travis</strong>, you could add a badge for the whole build on a specific branch. It was nice that it skipped allowed failure.</p>
+<p><strong>In GitHub Actions</strong>, it's different. <del>The badge covers <strong>1 specific workflow</strong>. This workflow should contain all the relevant jobs</del>.</p>
+<p>Actually, on GitHub repository, there is only one badge for all:</p>
+<img src="/assets/images/posts/github_actions_badge.png" class="img-thumbnail"> 
+<h2 id="concurrent-jobs"><a href="#concurrent-jobs" class="heading-anchor">Concurrent Jobs</a></h2>
+<p><strong>Travis CI</strong> allow only <a href="https://travis-ci.com/plans">3 concurrent jobs</a>. This forces us to group similar checks like coding standard, static analysis, and Rector to one big job. If it failed, we had to look inside to find out which of these 3 areas is it. </p>
+<p><strong>GitHub Actions</strong> allows you... wait for it <a href="https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions#usage-limits"><strong>20 jobs</strong></a>. </p>
+<p>Thanks to that, we can have one job for each of:</p>
+<ul>
+<li><code>bin/console lint:yaml</code></li>
+<li><code>bin/console lint:twig</code></li>
+<li><code>bin/console lint:container</code></li>
+</ul>
+<p>When <code>bin/console lint:twig</code> fails, we know right in the pull-request it's something in our templates. That's good quality, precise feedback.</p>
+<h2 id="where-should-we-stay-with-travis-ci"><a href="#where-should-we-stay-with-travis-ci" class="heading-anchor">Where Should We Stay with Travis CI</a></h2>
+<h3 id="local-git"><a href="#local-git" class="heading-anchor">Local Git</a></h3>
+<p>GitHub Actions are tough to work with local git. I migrated Symplify/MonorepoBuilder and Symplfiy/ChangelogLinker to Github Actions, and it's only troubling. </p>
+<h3 id="building-of-phar-and-push-to-another-repository"><a href="#building-of-phar-and-push-to-another-repository" class="heading-anchor">Building of PHAR and Push to Another Repository</a></h3>
+<p>Another weakness is the inability to get the current tag. That's right. Getting something as simple as an existing tag is rocket science.</p>
+<p>That's why we had to <a href="https://github.com/rectorphp/rector/blob/1f4b36dfedb1b07d8425093474fc5951358b0590/.travis.yml">revert <code>rector.phar</code> build and publish to Travis CI</a>.  </p>
+<h3 id="monorepo-split"><a href="#monorepo-split" class="heading-anchor">Monorepo Split</a></h3>
+<p>The monorepo split is the most massive performance operation on the whole CI. Also, GitHub actions have different git settings that break it — saying that it makes sense to have 20 parallel jobs on GitHub Actions and the heaviest on Travis. <strong>We kept <a href="https://github.com/symplify/symplify/blob/716eef260fcdf21362361cc9a3dab51a5a0408eb/.travis.yml#L9-L16">monorepo split</a> on Travis as the only job</strong> and it's now faster than ever.</p>
+<p><br></p>
+<p>I think that's due to service being pretty new to the market. I hope these issues will be seen as primitive soon. For the fest of the features, <strong>I love GitHub Action</strong> and think you'll too after having feedback under 3 minutes after the last commit :). </p>
+<p><br></p>
+<p>Happy coding!</p>
 
                 <br>
 
@@ -215,10 +385,10 @@ Yes, in code samples :)
             <script id="dsq-count-scr" src="https://itsworthsharing.disqus.com/count.js" async defer></script>
         </div>
 
-        <script src="/assets/js/jquery-3.3.1.slim.min.js?=1336047569"></script>
-<script src="/assets/gifplayer/jquery.gifplayer.js?=1474771976"></script>
-<script src="/assets/js/cluster-checklist.js?=1759932962"></script>
-<script src="/assets/js/cluster-expanable.js?=351616920"></script>
+        <script src="/assets/js/jquery-3.3.1.slim.min.js?=1061016533"></script>
+<script src="/assets/gifplayer/jquery.gifplayer.js?=1697353000"></script>
+<script src="/assets/js/cluster-checklist.js?=953072912"></script>
+<script src="/assets/js/cluster-expanable.js?=324242490"></script>
 
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
