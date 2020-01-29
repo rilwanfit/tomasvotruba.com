@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
-        <link href="/assets/bootstrap/bootstrap.min.css?v=1244361631" rel="stylesheet" type="text/css" />
+        <link href="/assets/bootstrap/bootstrap.min.css?v=2001386845" rel="stylesheet" type="text/css" />
 
-    <link href="/assets/prism/prism.css?v=503588077" rel="stylesheet" type="text/css" />
+    <link href="/assets/prism/prism.css?v=25213544" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/style.css?v=1529412220" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/style.css?v=376536427" rel="stylesheet" type="text/css" />
 
     <link href="/assets/gifplayer/gifplayer.css" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/checklist.css?v=1182065659" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/checklist.css?v=186808520" rel="stylesheet" type="text/css" />
 </head>
     <body>
         <!-- post_id: 236 -->
@@ -310,7 +310,7 @@ This sucks a lot. I tried to have GitHub Actions on <a href="https://github.com/
 <img src="/assets/images/posts/github_actions_badge.png" class="img-thumbnail"> 
 <h2 id="concurrent-jobs"><a href="#concurrent-jobs" class="heading-anchor">Concurrent Jobs</a></h2>
 <p><strong>Travis CI</strong> allow only <a href="https://travis-ci.com/plans">3 concurrent jobs</a>. This forces us to group similar checks like coding standard, static analysis, and Rector to one big job. If it failed, we had to look inside to find out which of these 3 areas is it. </p>
-<p><strong>GitHub Actions</strong> allows you... wait for it <a href="https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions#usage-limits"><strong>20 jobs</strong></a>. </p>
+<p><strong>GitHub Actions</strong> allows you to run... wait for it <a href="https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions#usage-limits"><strong>20 jobs</strong></a>. </p>
 <p>Thanks to that, we can have one job for each of:</p>
 <ul>
 <li><code>bin/console lint:yaml</code></li>
@@ -327,7 +327,7 @@ This sucks a lot. I tried to have GitHub Actions on <a href="https://github.com/
 <h3 id="monorepo-split"><a href="#monorepo-split" class="heading-anchor">Monorepo Split</a></h3>
 <p>The monorepo split is the most massive performance operation on the whole CI. Also, GitHub actions have different git settings that break it — saying that it makes sense to have 20 parallel jobs on GitHub Actions and the heaviest on Travis. <strong>We kept <a href="https://github.com/symplify/symplify/blob/716eef260fcdf21362361cc9a3dab51a5a0408eb/.travis.yml#L9-L16">monorepo split</a> on Travis as the only job</strong> and it's now faster than ever.</p>
 <p><br></p>
-<p>I think that's due to service being pretty new to the market. I hope these issues will be seen as primitive soon. For the rest of the features, <strong>I love GitHub Action</strong> and think you'll too after having feedback under 3 minutes after the last commit :). </p>
+<p>I think that's due to the service being pretty new to the market. I hope these issues will be seen as primitive soon. For the rest of the features, <strong>I love GitHub Action</strong> and think you'll too after having feedback under 3 minutes after the last commit :). </p>
 <p><br></p>
 <p>Happy coding!</p>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -386,10 +386,10 @@ This sucks a lot. I tried to have GitHub Actions on <a href="https://github.com/
             <script id="dsq-count-scr" src="https://itsworthsharing.disqus.com/count.js" async defer></script>
         </div>
 
-        <script src="/assets/js/jquery-3.3.1.slim.min.js?=1701754030"></script>
-<script src="/assets/gifplayer/jquery.gifplayer.js?=1626165672"></script>
-<script src="/assets/js/cluster-checklist.js?=274119439"></script>
-<script src="/assets/js/cluster-expanable.js?=378281897"></script>
+        <script src="/assets/js/jquery-3.3.1.slim.min.js?=416591187"></script>
+<script src="/assets/gifplayer/jquery.gifplayer.js?=658245705"></script>
+<script src="/assets/js/cluster-checklist.js?=798266437"></script>
+<script src="/assets/js/cluster-expanable.js?=235487019"></script>
 
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
