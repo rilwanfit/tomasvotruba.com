@@ -8,7 +8,7 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Wed, 29 Jan 2020 17:29:25 +0000</pubDate>
+        <pubDate>Mon, 03 Feb 2020 12:49:47 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
                                             <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
@@ -3576,21 +3576,8 @@ Today I will show you, how to do it gradually without breaking the application. 
                 </item>
                                 
             
+                                                    
                         
-                        
-                            <item>
-                    <title><![CDATA[ How to Decouple Monolith like a Boss with Composer Local Packages ]]></title>
-                    <link>https://www.tomasvotruba.com/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/</link>
-                    <description><![CDATA[ While building PHP applications that grows and grows, you often get to the situation when there is too much code. You get easily lost, duplicate and code smells and rottens. The cognitive upkeep to add a new class is bigger every day.
- ]]></description>
-                    <guid isPermaLink="false">https://www.tomasvotruba.com/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/</guid>
-                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
-
-                                        <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
-                                            <lastBuildDate>Tue, 07 Feb 2017 00:00:00 +0000</lastBuildDate>
-                    
-                    <comments>https://www.tomasvotruba.com/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages#disqus_thread</comments>
-                </item>
                                 
             
                         
