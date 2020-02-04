@@ -8,11 +8,30 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Mon, 03 Feb 2020 16:21:18 +0000</pubDate>
+        <pubDate>Tue, 04 Feb 2020 09:39:09 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
-                                            <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+                                            <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
             
+            
+                        
+                        
+                            <item>
+                    <title><![CDATA[ How to run Rector and PHPStan on Huge Project in 3 Seconds with PHPStorm ]]></title>
+                    <link>https://www.tomasvotruba.com/blog/2020/02/03/how-to-run-rector-and-phpstan-on-huge-project-in-3-seconds-with-phpstorm/</link>
+                    <description><![CDATA[ Today we&#039;ll look at the command line and run performance heavy dev tools like Rector or PHPStan on our projects. I&#039;m guessing that it takes more than 10 seconds to run whatever project you use.
+
+
+How would you like it be less than 3 seconds with just one click in PHPStorm? ]]></description>
+                    <guid isPermaLink="false">https://www.tomasvotruba.com/blog/2020/02/03/how-to-run-rector-and-phpstan-on-huge-project-in-3-seconds-with-phpstorm/</guid>
+                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
+
+                                        <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+                                            <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+                    
+                    <comments>https://www.tomasvotruba.com/blog/2020/02/03/how-to-run-rector-and-phpstan-on-huge-project-in-3-seconds-with-phpstorm#disqus_thread</comments>
+                </item>
+                                
             
                         
                         
