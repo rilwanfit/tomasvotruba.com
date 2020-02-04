@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
 
-        <link href="/assets/bootstrap/bootstrap.min.css?v=1149146103" rel="stylesheet" type="text/css" />
+        <link href="/assets/bootstrap/bootstrap.min.css?v=1048042733" rel="stylesheet" type="text/css" />
 
-    <link href="/assets/prism/prism.css?v=1122895858" rel="stylesheet" type="text/css" />
+    <link href="/assets/prism/prism.css?v=208543590" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/style.css?v=88782169" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/style.css?v=92681773" rel="stylesheet" type="text/css" />
 
     <link href="/assets/gifplayer/gifplayer.css" rel="stylesheet" type="text/css" />
 
-        <link href="/assets/css/checklist.css?v=1854238786" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/checklist.css?v=933837665" rel="stylesheet" type="text/css" />
 </head>
     <body>
         <!-- post_id: 237 -->
@@ -151,7 +151,7 @@ How would you like it be <strong>less than 3 seconds with just one click</strong
                 </div>
 
                 
-                <p>Let's say we have a reasonably big codebase, like Rector, with over 70 000 lines of code. Projects I consults lately usually fit int 200-600 000 lines of code, though. But let's take Rector as the baseline, as that's the project we have data for.</p>
+                <p>Let's say we have a reasonably big codebase, like Rector, with over 70 000 lines of code. Projects I consult lately usually fit into 200-600 000 lines of code, though. But let's take Rector as the baseline, as that's the project we have data for.</p>
 <p>We add a new feature, change test, fix a bug, 300 added lines, 200 removed.</p>
 <p>Now, <strong>we want to run Rector and PHPStan to make sure the code is clean and working</strong>. So we run PHPStan:</p>
 <img src="/assets/images/posts/2020/external_tools_normal_phpstan.gif" class="img-thumbnail">
@@ -161,8 +161,8 @@ How would you like it be <strong>less than 3 seconds with just one click</strong
 <br></p>
 <p>...<strong>40 seconds</strong>!</p>
 <p><br></p>
-<h2 id="how-we-hack-it"><a href="#how-we-hack-it" class="heading-anchor">How we Hack It?</a></h2>
-<p>It takes so long. We might adapt, and <strong>push it into the remote repository and let the CI server handle it</strong>. After all, it's often much faster than our local laptop. I used this approach at big codebases so far.</p>
+<h2 id="how-do-we-hack-it"><a href="#how-do-we-hack-it" class="heading-anchor">How do we Hack It?</a></h2>
+<p>It takes so long. We might adapt and <strong>push it into the remote repository and let the CI server handle it</strong>. After all, it's often much faster than our local laptop. I used this approach at big codebases so far.</p>
 <p>Another way is to copy the directory path and run tool only on it:</p>
 <pre><code class="language-bash">vendor/bin/phpstan analyse src/SomeDirectory
 vendor/bin/rector process src/SomeDirectory</code></pre>
@@ -179,7 +179,7 @@ vendor/bin/rector process src/SomeDirectory</code></pre>
 <h2 id="too-slow-go-home"><a href="#too-slow-go-home" class="heading-anchor">Too Slow? Go Home!</a></h2>
 <p>When I talk with developers, this is one of the main reasons they don't use such tools. It takes too long to get feedback from them. It destroys their focus on the features.</p>
 <blockquote class="blockquote text-center mt-5 mb-5">
-Frustration is always sign we should ask the question:
+Frustration is always the sign we should ask this question:
 <br> 
 How can we do better?
 </blockquote>
@@ -191,7 +191,7 @@ How can we do better?
 <p></a></p>
 <p><strong>It might trim off some more frustration</strong> in your daily work and turn you into a flow developer as a result. The bigger your codebase, the more it might help you get under 3 seconds.</p>
 <p><br></p>
-<h2 id="how-it-works"><a href="#how-it-works" class="heading-anchor">How it Works?</a></h2>
+<h2 id="how-does-it-work"><a href="#how-does-it-work" class="heading-anchor">How does it Work?</a></h2>
 <p>You run <strong>the tool only on a selected directory in the left tree</strong>. </p>
 <ul>
 <li>Without the command line. </li>
@@ -222,7 +222,7 @@ How can we do better?
 <p><br></p>
 <p>Save.</p>
 <h2 id="how-to-use-it"><a href="#how-to-use-it" class="heading-anchor">How to Use It?</a></h2>
-<p>Pick the directory you want a process in the file tree.</p>
+<p>Pick the directory you want to process in the file tree.</p>
 <p>Run action.</p>
 <p>Type &quot;Rector&quot; or &quot;PHPStan&quot; and hit enter:</p>
 <img src="/assets/images/posts/2020/external_tools_rector.gif" class="img-thumbnail">
@@ -285,10 +285,10 @@ How can we do better?
             <script id="dsq-count-scr" src="https://itsworthsharing.disqus.com/count.js" async defer></script>
         </div>
 
-        <script src="/assets/js/jquery-3.3.1.slim.min.js?=168124550"></script>
-<script src="/assets/gifplayer/jquery.gifplayer.js?=1951422814"></script>
-<script src="/assets/js/cluster-checklist.js?=820291322"></script>
-<script src="/assets/js/cluster-expanable.js?=1328249148"></script>
+        <script src="/assets/js/jquery-3.3.1.slim.min.js?=669863909"></script>
+<script src="/assets/gifplayer/jquery.gifplayer.js?=2110370682"></script>
+<script src="/assets/js/cluster-checklist.js?=1379328367"></script>
+<script src="/assets/js/cluster-expanable.js?=1494290438"></script>
 
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
