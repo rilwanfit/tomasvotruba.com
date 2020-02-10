@@ -8,7 +8,7 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Mon, 10 Feb 2020 20:59:43 +0000</pubDate>
+        <pubDate>Mon, 10 Feb 2020 21:25:52 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
                                             <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
@@ -1161,9 +1161,7 @@ Sculpin is the older brother of Statie but is mostly retired last 3 years. Do yo
                     <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 
                                         <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
-                                            <updated>2019-01-01UTC00:00:000</updated>
-                        <atom:updated>Tue, 01 Jan 2019 00:00:00 +0000</atom:updated>
-                        <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+                                            <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0000</lastBuildDate>
                     
                     <comments>https://www.tomasvotruba.com/blog/2019/01/14/11-steps-to-migrate-from-sculpin-to-statie#disqus_thread</comments>
                 </item>
@@ -1182,9 +1180,7 @@ I wanted to migrate my static websites from Jekyll to Statie. Can new init comma
                     <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 
                                         <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
-                                            <updated>2019-02-01UTC00:00:000</updated>
-                        <atom:updated>Fri, 01 Feb 2019 00:00:00 +0000</atom:updated>
-                        <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
+                                            <lastBuildDate>Thu, 10 Jan 2019 00:00:00 +0000</lastBuildDate>
                     
                     <comments>https://www.tomasvotruba.com/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie#disqus_thread</comments>
                 </item>
