@@ -8,11 +8,34 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Thu, 06 Feb 2020 14:23:23 +0000</pubDate>
+        <pubDate>Mon, 10 Feb 2020 19:19:10 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
-                                            <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+                                            <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
             
+            
+                        
+                        
+                            <item>
+                    <title><![CDATA[ How to Test Monorepo After Split Before Actual Split ]]></title>
+                    <link>https://www.tomasvotruba.com/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/</link>
+                    <description><![CDATA[ In 14 months old post How to Test Monorepo in 3 Layers we talked about testing monorepo in 3 layers. So you can be sure every package works as it should.
+
+
+3 layers are testing in a monorepo, testing package directory, and testing after a split.
+The latter takes a huge amount of time. The time we don&#039;t have to spare in 2020.
+
+
+How can we make it faster while keeping the test quality high? ]]></description>
+                    <guid isPermaLink="false">https://www.tomasvotruba.com/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/</guid>
+                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
+
+                                        <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+                                            <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+                    
+                    <comments>https://www.tomasvotruba.com/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split#disqus_thread</comments>
+                </item>
+                                
             
                         
                         
