@@ -8,11 +8,29 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Sun, 16 Feb 2020 15:58:59 +0000</pubDate>
+        <pubDate>Tue, 18 Feb 2020 17:08:10 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
-                                            <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+                                            <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate>
             
+            
+                        
+                        
+                            <item>
+                    <title><![CDATA[ Local Packages 3 Years Later ]]></title>
+                    <link>https://www.tomasvotruba.com/blog/2020/02/17/local-packages-3-years-later/</link>
+                    <description><![CDATA[ The first public idea about local packages was published over 3 years ago after 1 year of internal testing.
+
+How do they stand in 2020? How people use it wrong? Are they still the best option to keep low complexity in huge projects?  ]]></description>
+                    <guid isPermaLink="false">https://www.tomasvotruba.com/blog/2020/02/17/local-packages-3-years-later/</guid>
+                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
+
+                                        <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+                                            <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate>
+                    
+                    <comments>https://www.tomasvotruba.com/blog/2020/02/17/local-packages-3-years-later#disqus_thread</comments>
+                </item>
+                                
             
                         
                         
