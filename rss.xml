@@ -8,11 +8,30 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://www.tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>Tue, 18 Feb 2020 17:08:10 +0000</pubDate>
+        <pubDate>Wed, 26 Feb 2020 19:59:47 +0000</pubDate>
         <atom:link href="https://www.tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
 
-                                            <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate>
+                                            <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
             
+            
+                        
+                        
+                            <item>
+                    <title><![CDATA[ How Many Days of Technical Debt Has your PHP Project ]]></title>
+                    <link>https://www.tomasvotruba.com/blog/2020/02/24/how-many-days-of-technical-debt-has-your-php-project/</link>
+                    <description><![CDATA[ Every project has technical dept. But how would you measure it? With cognitive complexity? The age of the framework? Any other guess?
+
+
+This year I&#039;ve started to use CI service, which tells you the number in days. And it works pretty well... how many days Rector has? Keep on learning. ]]></description>
+                    <guid isPermaLink="false">https://www.tomasvotruba.com/blog/2020/02/24/how-many-days-of-technical-debt-has-your-php-project/</guid>
+                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
+
+                                        <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+                                            <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
+                    
+                    <comments>https://www.tomasvotruba.com/blog/2020/02/24/how-many-days-of-technical-debt-has-your-php-project#disqus_thread</comments>
+                </item>
+                                
             
                         
                         
